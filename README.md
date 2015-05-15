@@ -5,3 +5,8 @@ This [Docker](http://www.docker.com/) image is built exactly as [digitalwonderla
 ## Additional Software:
 
 * [Kibana](http://www.elasticsearch.org/overview/kibana/)
+
+## Usage
+Use with a linked container named `elasticsearch` and should be well. For instance:
+
+    docker run --rm --name kibana -p 5601:5601 --link elasticsearch:elasticsearch bosr/kibana
